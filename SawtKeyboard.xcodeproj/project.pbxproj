@@ -1,0 +1,600 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B10000000000000000000001 /* SawtKeyboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000001 /* SawtKeyboardApp.swift */; };
+		B10000000000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000002 /* ContentView.swift */; };
+		B10000000000000000000003 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000003 /* SettingsView.swift */; };
+		B10000000000000000000004 /* AppHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000004 /* AppHeaderView.swift */; };
+		B10000000000000000000005 /* SetupSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000005 /* SetupSectionView.swift */; };
+		B10000000000000000000006 /* ThemePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000006 /* ThemePickerView.swift */; };
+		B10000000000000000000007 /* PremiumSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000007 /* PremiumSectionView.swift */; };
+		B10000000000000000000008 /* LanguageSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000008 /* LanguageSectionView.swift */; };
+		B10000000000000000000009 /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000009 /* PurchaseManager.swift */; };
+		B1000000000000000000000A /* KeyboardStatusChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000A /* KeyboardStatusChecker.swift */; };
+		B1000000000000000000000B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000B /* Assets.xcassets */; };
+		B1000000000000000000000C /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000C /* Configuration.storekit */; };
+		B1000000000000000000000D /* SharedDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000D /* SharedDefaults.swift */; };
+		B1000000000000000000000E /* KeyboardLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000E /* KeyboardLanguage.swift */; };
+		B1000000000000000000000F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000F /* Theme.swift */; };
+		B10000000000000000000010 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000010 /* ThemeManager.swift */; };
+		B10000000000000000000011 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000011 /* Strings.swift */; };
+		B10000000000000000000012 /* GeezConsonant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000012 /* GeezConsonant.swift */; };
+		B10000000000000000000013 /* AppGroupNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000015 /* AppGroupNotifier.swift */; };
+		B20000000000000000000001 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000001 /* KeyboardViewController.swift */; };
+		B20000000000000000000002 /* KeyboardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000002 /* KeyboardState.swift */; };
+		B20000000000000000000003 /* WordSuggestionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000003 /* WordSuggestionEngine.swift */; };
+		B20000000000000000000004 /* KeyboardRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000004 /* KeyboardRootView.swift */; };
+		B20000000000000000000005 /* GeezGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000005 /* GeezGridView.swift */; };
+		B20000000000000000000006 /* VowelPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000006 /* VowelPopupView.swift */; };
+		B20000000000000000000007 /* NumberPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000007 /* NumberPadView.swift */; };
+		B20000000000000000000008 /* ToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000008 /* ToolbarView.swift */; };
+		B20000000000000000000009 /* SuggestionBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000009 /* SuggestionBarView.swift */; };
+		B2000000000000000000000A /* tigrinya_words.txt in Resources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000A /* tigrinya_words.txt */; };
+		B2000000000000000000000B /* SharedDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000D /* SharedDefaults.swift */; };
+		B2000000000000000000000C /* KeyboardLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000E /* KeyboardLanguage.swift */; };
+		B2000000000000000000000D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000F /* Theme.swift */; };
+		B2000000000000000000000E /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000010 /* ThemeManager.swift */; };
+		B2000000000000000000000F /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000011 /* Strings.swift */; };
+		B20000000000000000000010 /* GeezConsonant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000012 /* GeezConsonant.swift */; };
+		B20000000000000000000011 /* SawtKeyboardExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = P20000000000000000000001 /* SawtKeyboardExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B20000000000000000000012 /* LatinKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000D /* LatinKeyboardView.swift */; };
+		B20000000000000000000013 /* AppGroupNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000015 /* AppGroupNotifier.swift */; };
+		EB1EAFF62FCAC6C400D2DA4B /* AboutSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1EAFF52FCAC6C400D2DA4B /* AboutSectionView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C10000000000000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = P10000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = T20000000000000000000001;
+			remoteInfo = SawtKeyboardExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CP10000000000000000000001 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B20000000000000000000011 /* SawtKeyboardExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EB1EAFF52FCAC6C400D2DA4B /* AboutSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSectionView.swift; sourceTree = "<group>"; };
+		F10000000000000000000001 /* SawtKeyboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SawtKeyboardApp.swift; sourceTree = "<group>"; };
+		F10000000000000000000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F10000000000000000000003 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F10000000000000000000004 /* AppHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHeaderView.swift; sourceTree = "<group>"; };
+		F10000000000000000000005 /* SetupSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupSectionView.swift; sourceTree = "<group>"; };
+		F10000000000000000000006 /* ThemePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePickerView.swift; sourceTree = "<group>"; };
+		F10000000000000000000007 /* PremiumSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumSectionView.swift; sourceTree = "<group>"; };
+		F10000000000000000000008 /* LanguageSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSectionView.swift; sourceTree = "<group>"; };
+		F10000000000000000000009 /* PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
+		F1000000000000000000000A /* KeyboardStatusChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardStatusChecker.swift; sourceTree = "<group>"; };
+		F1000000000000000000000B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F1000000000000000000000C /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
+		F1000000000000000000000D /* SharedDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDefaults.swift; sourceTree = "<group>"; };
+		F1000000000000000000000E /* KeyboardLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLanguage.swift; sourceTree = "<group>"; };
+		F1000000000000000000000F /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		F10000000000000000000010 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		F10000000000000000000011 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		F10000000000000000000012 /* GeezConsonant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeezConsonant.swift; sourceTree = "<group>"; };
+		F10000000000000000000013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F10000000000000000000014 /* SawtKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SawtKeyboard.entitlements; sourceTree = "<group>"; };
+		F10000000000000000000015 /* AppGroupNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroupNotifier.swift; sourceTree = "<group>"; };
+		F20000000000000000000001 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		F20000000000000000000002 /* KeyboardState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardState.swift; sourceTree = "<group>"; };
+		F20000000000000000000003 /* WordSuggestionEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSuggestionEngine.swift; sourceTree = "<group>"; };
+		F20000000000000000000004 /* KeyboardRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardRootView.swift; sourceTree = "<group>"; };
+		F20000000000000000000005 /* GeezGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeezGridView.swift; sourceTree = "<group>"; };
+		F20000000000000000000006 /* VowelPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VowelPopupView.swift; sourceTree = "<group>"; };
+		F20000000000000000000007 /* NumberPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadView.swift; sourceTree = "<group>"; };
+		F20000000000000000000008 /* ToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarView.swift; sourceTree = "<group>"; };
+		F20000000000000000000009 /* SuggestionBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionBarView.swift; sourceTree = "<group>"; };
+		F2000000000000000000000A /* tigrinya_words.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = tigrinya_words.txt; sourceTree = "<group>"; };
+		F2000000000000000000000B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2000000000000000000000C /* SawtKeyboardExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SawtKeyboardExtension.entitlements; sourceTree = "<group>"; };
+		F2000000000000000000000D /* LatinKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatinKeyboardView.swift; sourceTree = "<group>"; };
+		P10000000000000000000002 /* SawtKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SawtKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		P20000000000000000000001 /* SawtKeyboardExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SawtKeyboardExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FW10000000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FW20000000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		G10000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				EB1EAFF52FCAC6C400D2DA4B /* AboutSectionView.swift */,
+				G10000000000000000000002 /* Shared */,
+				G10000000000000000000003 /* SawtKeyboard */,
+				G10000000000000000000004 /* SawtKeyboardExtension */,
+				G10000000000000000000005 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		G10000000000000000000002 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F1000000000000000000000D /* SharedDefaults.swift */,
+				F1000000000000000000000E /* KeyboardLanguage.swift */,
+				F1000000000000000000000F /* Theme.swift */,
+				F10000000000000000000010 /* ThemeManager.swift */,
+				F10000000000000000000011 /* Strings.swift */,
+				F10000000000000000000012 /* GeezConsonant.swift */,
+				F10000000000000000000015 /* AppGroupNotifier.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		G10000000000000000000003 /* SawtKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				F10000000000000000000001 /* SawtKeyboardApp.swift */,
+				F10000000000000000000002 /* ContentView.swift */,
+				G10000000000000000000006 /* Views */,
+				G10000000000000000000007 /* Managers */,
+				G10000000000000000000008 /* Helpers */,
+				F1000000000000000000000B /* Assets.xcassets */,
+				F1000000000000000000000C /* Configuration.storekit */,
+				F10000000000000000000013 /* Info.plist */,
+				F10000000000000000000014 /* SawtKeyboard.entitlements */,
+			);
+			path = SawtKeyboard;
+			sourceTree = "<group>";
+		};
+		G10000000000000000000004 /* SawtKeyboardExtension */ = {
+			isa = PBXGroup;
+			children = (
+				F20000000000000000000001 /* KeyboardViewController.swift */,
+				F20000000000000000000002 /* KeyboardState.swift */,
+				F20000000000000000000003 /* WordSuggestionEngine.swift */,
+				G10000000000000000000009 /* Views */,
+				G20000000000000000000001 /* assets */,
+				F2000000000000000000000B /* Info.plist */,
+				F2000000000000000000000C /* SawtKeyboardExtension.entitlements */,
+			);
+			path = SawtKeyboardExtension;
+			sourceTree = "<group>";
+		};
+		G10000000000000000000005 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				P10000000000000000000002 /* SawtKeyboard.app */,
+				P20000000000000000000001 /* SawtKeyboardExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		G10000000000000000000006 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F10000000000000000000003 /* SettingsView.swift */,
+				F10000000000000000000004 /* AppHeaderView.swift */,
+				F10000000000000000000005 /* SetupSectionView.swift */,
+				F10000000000000000000006 /* ThemePickerView.swift */,
+				F10000000000000000000007 /* PremiumSectionView.swift */,
+				F10000000000000000000008 /* LanguageSectionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		G10000000000000000000007 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F10000000000000000000009 /* PurchaseManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		G10000000000000000000008 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F1000000000000000000000A /* KeyboardStatusChecker.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		G10000000000000000000009 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F20000000000000000000004 /* KeyboardRootView.swift */,
+				F20000000000000000000005 /* GeezGridView.swift */,
+				F20000000000000000000006 /* VowelPopupView.swift */,
+				F20000000000000000000007 /* NumberPadView.swift */,
+				F20000000000000000000008 /* ToolbarView.swift */,
+				F20000000000000000000009 /* SuggestionBarView.swift */,
+				F2000000000000000000000D /* LatinKeyboardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		G20000000000000000000001 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				F2000000000000000000000A /* tigrinya_words.txt */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		T10000000000000000000001 /* SawtKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CL10000000000000000000001 /* Build configuration list for PBXNativeTarget "SawtKeyboard" */;
+			buildPhases = (
+				S10000000000000000000001 /* Sources */,
+				FW10000000000000000000001 /* Frameworks */,
+				R10000000000000000000001 /* Resources */,
+				CP10000000000000000000001 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D10000000000000000000001 /* PBXTargetDependency */,
+			);
+			name = SawtKeyboard;
+			productName = SawtKeyboard;
+			productReference = P10000000000000000000002 /* SawtKeyboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		T20000000000000000000001 /* SawtKeyboardExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CL20000000000000000000001 /* Build configuration list for PBXNativeTarget "SawtKeyboardExtension" */;
+			buildPhases = (
+				S20000000000000000000001 /* Sources */,
+				FW20000000000000000000001 /* Frameworks */,
+				R20000000000000000000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SawtKeyboardExtension;
+			productName = SawtKeyboardExtension;
+			productReference = P20000000000000000000001 /* SawtKeyboardExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		P10000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					T10000000000000000000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					T20000000000000000000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = CL10000000000000000000002 /* Build configuration list for PBXProject "SawtKeyboard" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = G10000000000000000000001;
+			productRefGroup = G10000000000000000000005 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				T10000000000000000000001 /* SawtKeyboard */,
+				T20000000000000000000001 /* SawtKeyboardExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		R10000000000000000000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1000000000000000000000B /* Assets.xcassets in Resources */,
+				B1000000000000000000000C /* Configuration.storekit in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		R20000000000000000000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2000000000000000000000A /* tigrinya_words.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		S10000000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B10000000000000000000001 /* SawtKeyboardApp.swift in Sources */,
+				B10000000000000000000002 /* ContentView.swift in Sources */,
+				B10000000000000000000003 /* SettingsView.swift in Sources */,
+				B10000000000000000000004 /* AppHeaderView.swift in Sources */,
+				B10000000000000000000005 /* SetupSectionView.swift in Sources */,
+				B10000000000000000000006 /* ThemePickerView.swift in Sources */,
+				B10000000000000000000007 /* PremiumSectionView.swift in Sources */,
+				B10000000000000000000008 /* LanguageSectionView.swift in Sources */,
+				EB1EAFF62FCAC6C400D2DA4B /* AboutSectionView.swift in Sources */,
+				B10000000000000000000009 /* PurchaseManager.swift in Sources */,
+				B1000000000000000000000A /* KeyboardStatusChecker.swift in Sources */,
+				B1000000000000000000000D /* SharedDefaults.swift in Sources */,
+				B1000000000000000000000E /* KeyboardLanguage.swift in Sources */,
+				B1000000000000000000000F /* Theme.swift in Sources */,
+				B10000000000000000000010 /* ThemeManager.swift in Sources */,
+				B10000000000000000000011 /* Strings.swift in Sources */,
+				B10000000000000000000012 /* GeezConsonant.swift in Sources */,
+				B10000000000000000000013 /* AppGroupNotifier.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		S20000000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B20000000000000000000001 /* KeyboardViewController.swift in Sources */,
+				B20000000000000000000002 /* KeyboardState.swift in Sources */,
+				B20000000000000000000003 /* WordSuggestionEngine.swift in Sources */,
+				B20000000000000000000004 /* KeyboardRootView.swift in Sources */,
+				B20000000000000000000005 /* GeezGridView.swift in Sources */,
+				B20000000000000000000006 /* VowelPopupView.swift in Sources */,
+				B20000000000000000000007 /* NumberPadView.swift in Sources */,
+				B20000000000000000000008 /* ToolbarView.swift in Sources */,
+				B20000000000000000000009 /* SuggestionBarView.swift in Sources */,
+				B20000000000000000000012 /* LatinKeyboardView.swift in Sources */,
+				B2000000000000000000000B /* SharedDefaults.swift in Sources */,
+				B2000000000000000000000C /* KeyboardLanguage.swift in Sources */,
+				B2000000000000000000000D /* Theme.swift in Sources */,
+				B2000000000000000000000E /* ThemeManager.swift in Sources */,
+				B2000000000000000000000F /* Strings.swift in Sources */,
+				B20000000000000000000010 /* GeezConsonant.swift in Sources */,
+				B20000000000000000000013 /* AppGroupNotifier.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D10000000000000000000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = T20000000000000000000001 /* SawtKeyboardExtension */;
+			targetProxy = C10000000000000000000001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		X10000000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		X10000000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		X10000000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SawtKeyboard/SawtKeyboard.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TDB9G5LFDG;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SawtKeyboard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sawt Keyboard";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sawtKeyboard.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		X10000000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SawtKeyboard/SawtKeyboard.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TDB9G5LFDG;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SawtKeyboard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sawt Keyboard";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sawtKeyboard.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		X20000000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SawtKeyboardExtension/SawtKeyboardExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TDB9G5LFDG;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SawtKeyboardExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sawt Keyboard";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sawtKeyboard.app.extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		X20000000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SawtKeyboardExtension/SawtKeyboardExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TDB9G5LFDG;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SawtKeyboardExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sawt Keyboard";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sawtKeyboard.app.extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CL10000000000000000000001 /* Build configuration list for PBXNativeTarget "SawtKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				X10000000000000000000003 /* Debug */,
+				X10000000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CL10000000000000000000002 /* Build configuration list for PBXProject "SawtKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				X10000000000000000000001 /* Debug */,
+				X10000000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CL20000000000000000000001 /* Build configuration list for PBXNativeTarget "SawtKeyboardExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				X20000000000000000000001 /* Debug */,
+				X20000000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = P10000000000000000000001 /* Project object */;
+}

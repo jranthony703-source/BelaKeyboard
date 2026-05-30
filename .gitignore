@@ -1,0 +1,22 @@
+# Xcode
+DerivedData/
+build/
+*.xcuserstate
+*.xccheckout
+xcuserdata/
+
+# macOS
+.DS_Store
+
+# Archives
+*.ipa
+*.dSYM.zip
+
+# Swift Package Manager
+.build/
+Packages/
+
+# Secrets (never commit)
+*.p12
+*.mobileprovision
+AuthKey_*.p8

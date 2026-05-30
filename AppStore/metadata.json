@@ -1,0 +1,16 @@
+{
+  "appName": "Bela Keyboard",
+  "subtitle": "Proper Tigrinya Ge'ez Keyboard",
+  "creator": "Antonyo S MICHAEL",
+  "bundleId": "com.sawtKeyboard.app",
+  "extensionBundleId": "com.sawtKeyboard.app.extension",
+  "appGroup": "group.com.sawtKeyboard.shared",
+  "iapProductId": "com.sawtKeyboard.premiumThemes",
+  "iapPrice": "2.99",
+  "iapType": "Non-Consumable",
+  "primaryCategory": "Utilities",
+  "keywords": ["Tigrinya", "Ge'ez", "Ethiopic", "Eritrea", "Bela", "keyboard", "ትግርኛ", "ቤላ", "Amharic"],
+  "promotionalText": "BELA ቤላ — the proper Tigrinya keyboard. Type fluently in Ge'ez script, switch languages instantly, and personalize with beautiful themes.",
+  "description": "BELA ቤላ Keyboard is a beautifully crafted native Tigrinya and Ge'ez keyboard for iPhone, created by Antonyo S MICHAEL.\n\nFEATURES\n• Full Ethiopic syllabary — 33 base consonants with a single-tap vowel popup for all 7 forms\n• Tigrinya word suggestions as you type\n• Three languages in one — Tigrinya, Tigre, Amharic\n• Eight beautiful themes including Habesha, Eritrea, Ocean, Forest, Night and more\n• Numbers, Latin and Ge'ez modes — switch with one tap\n• Native iOS performance, no ads in the keyboard, fully private\n• Optimized for iPhone, light and dark mode\n\nPremium Themes unlock 5 extra themes with a one-time in-app purchase.\n\nNeed help or want to suggest a feature? Email support@belakeyboard.app",
+  "reviewNotes": "Enable the keyboard under Settings > General > Keyboard > Keyboards > Add New Keyboard > Bela Keyboard. Premium themes unlock via in-app purchase (StoreKit testing supported with Configuration.storekit). No 'Full Access' is required for v1 — the keyboard performs no network requests."
+}
