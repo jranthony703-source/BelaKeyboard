@@ -15,12 +15,14 @@ final class KeyboardViewController: UIInputViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupKeyboardView()
+        HapticManager.prepare()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         keyboardState.refreshSettings()
         updateHeightConstraint()
+        HapticManager.prepare()
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -63,5 +65,36 @@ final class KeyboardViewController: UIInputViewController {
 
     private func updateHeightConstraint() {
         heightConstraint?.constant = preferredKeyboardHeight
+    }
+}
+
+// MARK: - Haptic feedback
+
+/// Lightweight haptic feedback for key presses.
+/// Requires "Allow Full Access" in keyboard settings to fire on most iOS versions;
+/// degrades silently to a no-op otherwise — no crash, no error.
+enum HapticManager {
+    enum Strength {
+        case light
+        case medium
+        case rigid
+    }
+
+    private static let light = UIImpactFeedbackGenerator(style: .light)
+    private static let medium = UIImpactFeedbackGenerator(style: .medium)
+    private static let rigid = UIImpactFeedbackGenerator(style: .rigid)
+
+    static func prepare() {
+        light.prepare()
+        medium.prepare()
+        rigid.prepare()
+    }
+
+    static func tap(_ strength: Strength = .light) {
+        switch strength {
+        case .light: light.impactOccurred(intensity: 0.55)
+        case .medium: medium.impactOccurred(intensity: 0.75)
+        case .rigid: rigid.impactOccurred(intensity: 0.85)
+        }
     }
 }

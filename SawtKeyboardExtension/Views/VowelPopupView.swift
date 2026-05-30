@@ -11,6 +11,7 @@ struct VowelPopupView: View {
         HStack(spacing: 4) {
             ForEach(Array(consonant.vowelForms.enumerated()), id: \.offset) { index, form in
                 Button {
+                    HapticManager.tap(.light)
                     onSelect(form)
                 } label: {
                     VStack(spacing: 2) {
@@ -24,11 +25,8 @@ struct VowelPopupView: View {
                     }
                     .foregroundColor(theme.keyText)
                     .frame(minWidth: 40, minHeight: 52)
-                    .background(theme.popupBackground)
-                    .cornerRadius(8)
-                    .shadow(color: .black.opacity(0.2), radius: 3, x: 0, y: 2)
                 }
-                .buttonStyle(.plain)
+                .buttonStyle(VowelButtonStyle(theme: theme))
             }
         }
         .padding(.horizontal, 8)
@@ -36,5 +34,21 @@ struct VowelPopupView: View {
         .background(theme.popupBackground.opacity(0.95))
         .cornerRadius(10)
         .shadow(color: .black.opacity(0.25), radius: 6, x: 0, y: 3)
+    }
+}
+
+private struct VowelButtonStyle: ButtonStyle {
+    let theme: Theme
+
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .background(
+                theme.popupBackground
+                    .brightness(configuration.isPressed ? 0.16 : 0)
+            )
+            .cornerRadius(8)
+            .shadow(color: .black.opacity(0.2), radius: 3, x: 0, y: 2)
+            .scaleEffect(configuration.isPressed ? 0.94 : 1.0)
+            .animation(.easeOut(duration: 0.08), value: configuration.isPressed)
     }
 }
