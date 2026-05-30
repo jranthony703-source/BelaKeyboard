@@ -103,4 +103,5 @@ enum KeyboardMode {
     case geez
     case latin
     case numbers
+    case emoji
 }

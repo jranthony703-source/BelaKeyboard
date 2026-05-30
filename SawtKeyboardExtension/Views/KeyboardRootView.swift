@@ -46,6 +46,7 @@ struct KeyboardRootView: View {
                     onNumbers: { state.mode = .numbers },
                     onLatin: { state.mode = .latin },
                     onGeez: { state.mode = .geez },
+                    onEmoji: { state.mode = .emoji },
                     onSpace: { state.insertSpace(onInsert: onInsertText) },
                     onReturn: { state.insertReturn(onInsert: onInsertText) },
                     onBackspace: { state.handleBackspace(onDelete: onDeleteBackward) }
@@ -82,6 +83,11 @@ struct KeyboardRootView: View {
                 theme: state.theme,
                 onInsert: { state.insertCharacter($0, onInsert: onInsertText) },
                 onBack: { state.mode = .geez }
+            )
+        case .emoji:
+            EmojiKeyboardView(
+                theme: state.theme,
+                onInsert: { state.insertCharacter($0, onInsert: onInsertText) }
             )
         }
     }

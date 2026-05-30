@@ -72,6 +72,7 @@ enum Strings {
         static let numbers = "123"
         static let latin = "ABC"
         static let geez = "ግዕዝ"
+        static let emoji = "😀"
         static let space = "space"
         static let back = "Back"
         static let returnKey = "return"

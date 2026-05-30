@@ -46,6 +46,8 @@
 		B20000000000000000000012 /* LatinKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000D /* LatinKeyboardView.swift */; };
 		B20000000000000000000013 /* AppGroupNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000015 /* AppGroupNotifier.swift */; };
 		EB1EAFF62FCAC6C400D2DA4B /* AboutSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1EAFF52FCAC6C400D2DA4B /* AboutSectionView.swift */; };
+		B20000000000000000000014 /* EmojiCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000E /* EmojiCatalog.swift */; };
+		B20000000000000000000015 /* EmojiKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000F /* EmojiKeyboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +110,8 @@
 		F2000000000000000000000B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2000000000000000000000C /* SawtKeyboardExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SawtKeyboardExtension.entitlements; sourceTree = "<group>"; };
 		F2000000000000000000000D /* LatinKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatinKeyboardView.swift; sourceTree = "<group>"; };
+		F2000000000000000000000E /* EmojiCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCatalog.swift; sourceTree = "<group>"; };
+		F2000000000000000000000F /* EmojiKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiKeyboardView.swift; sourceTree = "<group>"; };
 		P10000000000000000000002 /* SawtKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SawtKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		P20000000000000000000001 /* SawtKeyboardExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SawtKeyboardExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -133,7 +137,6 @@
 		G10000000000000000000001 = {
 			isa = PBXGroup;
 			children = (
-				EB1EAFF52FCAC6C400D2DA4B /* AboutSectionView.swift */,
 				G10000000000000000000002 /* Shared */,
 				G10000000000000000000003 /* SawtKeyboard */,
 				G10000000000000000000004 /* SawtKeyboardExtension */,
@@ -177,6 +180,7 @@
 				F20000000000000000000001 /* KeyboardViewController.swift */,
 				F20000000000000000000002 /* KeyboardState.swift */,
 				F20000000000000000000003 /* WordSuggestionEngine.swift */,
+				F2000000000000000000000E /* EmojiCatalog.swift */,
 				G10000000000000000000009 /* Views */,
 				G20000000000000000000001 /* assets */,
 				F2000000000000000000000B /* Info.plist */,
@@ -203,6 +207,7 @@
 				F10000000000000000000006 /* ThemePickerView.swift */,
 				F10000000000000000000007 /* PremiumSectionView.swift */,
 				F10000000000000000000008 /* LanguageSectionView.swift */,
+				EB1EAFF52FCAC6C400D2DA4B /* AboutSectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 				F20000000000000000000008 /* ToolbarView.swift */,
 				F20000000000000000000009 /* SuggestionBarView.swift */,
 				F2000000000000000000000D /* LatinKeyboardView.swift */,
+				F2000000000000000000000F /* EmojiKeyboardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -381,6 +387,8 @@
 				B20000000000000000000008 /* ToolbarView.swift in Sources */,
 				B20000000000000000000009 /* SuggestionBarView.swift in Sources */,
 				B20000000000000000000012 /* LatinKeyboardView.swift in Sources */,
+				B20000000000000000000014 /* EmojiCatalog.swift in Sources */,
+				B20000000000000000000015 /* EmojiKeyboardView.swift in Sources */,
 				B2000000000000000000000B /* SharedDefaults.swift in Sources */,
 				B2000000000000000000000C /* KeyboardLanguage.swift in Sources */,
 				B2000000000000000000000D /* Theme.swift in Sources */,
