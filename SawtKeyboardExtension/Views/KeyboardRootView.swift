@@ -76,7 +76,7 @@ struct KeyboardRootView: View {
             LatinKeyboardView(
                 theme: state.theme,
                 onInsert: { state.insertCharacter($0, onInsert: onInsertText) },
-                onBack: { state.mode = .geez }
+                onBackspace: { state.handleBackspace(onDelete: onDeleteBackward) }
             )
         case .numbers:
             NumberPadView(
