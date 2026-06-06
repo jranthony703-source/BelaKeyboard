@@ -48,6 +48,8 @@
 		EB1EAFF62FCAC6C400D2DA4B /* AboutSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1EAFF52FCAC6C400D2DA4B /* AboutSectionView.swift */; };
 		B20000000000000000000014 /* EmojiCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000E /* EmojiCatalog.swift */; };
 		B20000000000000000000015 /* EmojiKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000F /* EmojiKeyboardView.swift */; };
+		B10000000000000000000020 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000020 /* DesignSystem.swift */; };
+		B10000000000000000000021 /* KeyboardPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000021 /* KeyboardPreviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +114,8 @@
 		F2000000000000000000000D /* LatinKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatinKeyboardView.swift; sourceTree = "<group>"; };
 		F2000000000000000000000E /* EmojiCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCatalog.swift; sourceTree = "<group>"; };
 		F2000000000000000000000F /* EmojiKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiKeyboardView.swift; sourceTree = "<group>"; };
+		F10000000000000000000020 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		F10000000000000000000021 /* KeyboardPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardPreviewView.swift; sourceTree = "<group>"; };
 		P10000000000000000000002 /* SawtKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SawtKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		P20000000000000000000001 /* SawtKeyboardExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SawtKeyboardExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -208,6 +212,8 @@
 				F10000000000000000000007 /* PremiumSectionView.swift */,
 				F10000000000000000000008 /* LanguageSectionView.swift */,
 				EB1EAFF52FCAC6C400D2DA4B /* AboutSectionView.swift */,
+				F10000000000000000000020 /* DesignSystem.swift */,
+				F10000000000000000000021 /* KeyboardPreviewView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -370,6 +376,8 @@
 				B10000000000000000000011 /* Strings.swift in Sources */,
 				B10000000000000000000012 /* GeezConsonant.swift in Sources */,
 				B10000000000000000000013 /* AppGroupNotifier.swift in Sources */,
+				B10000000000000000000020 /* DesignSystem.swift in Sources */,
+				B10000000000000000000021 /* KeyboardPreviewView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

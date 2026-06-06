@@ -59,10 +59,7 @@ struct SetupSectionView: View {
                 .cornerRadius(8)
             }
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .padding()
-        .background(Color(.secondarySystemBackground))
-        .cornerRadius(14)
+        .glassCard()
     }
 }
 

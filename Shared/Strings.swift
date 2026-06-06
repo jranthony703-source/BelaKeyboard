@@ -22,6 +22,11 @@ enum Strings {
         static let openSettings = "Open Keyboard Settings"
     }
 
+    enum Preview {
+        static let sectionTitle = "Live Preview"
+        static let hint = "Tap the keys — this is your keyboard with the %@ theme."
+    }
+
     enum About {
         static let sectionTitle = "About"
         static let creator = "Created by Antonyo S MICHAEL"

@@ -52,10 +52,7 @@ struct AboutSectionView: View {
                     .padding(.top, 4)
             }
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .padding()
-        .background(Color(.secondarySystemBackground))
-        .cornerRadius(14)
+        .glassCard()
         .sheet(isPresented: $showShareSheet) {
             ShareSheet(items: [Strings.About.shareMessage])
         }
@@ -128,22 +125,6 @@ struct AboutSectionView: View {
         let appID = "0000000000"
         if let url = URL(string: "itms-apps://apps.apple.com/app/id\(appID)?action=write-review") {
             openURL(url)
-        }
-    }
-}
-
-struct SectionHeader: View {
-    let icon: String
-    let title: String
-
-    var body: some View {
-        HStack(spacing: 8) {
-            Image(systemName: icon)
-                .font(.system(size: 14, weight: .semibold))
-                .foregroundColor(.accentColor)
-            Text(title)
-                .font(.headline)
-            Spacer()
         }
     }
 }

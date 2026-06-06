@@ -7,28 +7,24 @@ struct SettingsView: View {
     @State private var keyboardEnabled: Bool?
 
     var body: some View {
-        ScrollView {
-            VStack(spacing: 20) {
-                AppHeaderView()
-                SetupSectionView(keyboardEnabled: $keyboardEnabled)
-                ThemePickerView()
-                PremiumSectionView()
-                LanguageSectionView(selectedLanguage: $defaultLanguage)
-                AboutSectionView()
+        ZStack {
+            AnimatedMeshBackground()
+
+            ScrollView {
+                VStack(spacing: 18) {
+                    AppHeaderView()
+                    SetupSectionView(keyboardEnabled: $keyboardEnabled)
+                    livePreviewSection
+                    ThemePickerView()
+                    PremiumSectionView()
+                    LanguageSectionView(selectedLanguage: $defaultLanguage)
+                    AboutSectionView()
+                }
+                .padding(.horizontal)
+                .padding(.bottom, 28)
             }
-            .padding(.horizontal)
-            .padding(.bottom, 24)
         }
-        .background(
-            LinearGradient(
-                colors: [Color(.systemBackground), Color.accentColor.opacity(0.04)],
-                startPoint: .top,
-                endPoint: .bottom
-            )
-            .ignoresSafeArea()
-        )
-        .navigationTitle(Strings.App.name)
-        .navigationBarTitleDisplayMode(.inline)
+        .toolbar(.hidden, for: .navigationBar)
         .onAppear {
             themeManager.refresh()
             defaultLanguage = KeyboardLanguage.defaultLanguage
@@ -44,5 +40,25 @@ struct SettingsView: View {
         } message: {
             Text(purchaseManager.statusMessage ?? "")
         }
+    }
+
+    private var livePreviewSection: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            SectionHeader(icon: "sparkles", title: Strings.Preview.sectionTitle, tint: Brand.pink)
+
+            KeyboardPreviewView(
+                theme: themeManager.activeTheme,
+                language: defaultLanguage
+            )
+
+            HStack(spacing: 6) {
+                Image(systemName: "hand.tap.fill")
+                    .font(.caption2)
+                Text(String(format: Strings.Preview.hint, themeManager.activeTheme.name))
+                    .font(.caption)
+            }
+            .foregroundColor(.secondary)
+        }
+        .glassCard()
     }
 }

@@ -21,9 +21,6 @@ struct LanguageSectionView: View {
                 .font(.caption)
                 .foregroundColor(.secondary)
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .padding()
-        .background(Color(.secondarySystemBackground))
-        .cornerRadius(14)
+        .glassCard()
     }
 }
