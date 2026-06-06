@@ -42,12 +42,7 @@ private struct VowelButtonStyle: ButtonStyle {
 
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .background(
-                theme.popupBackground
-                    .brightness(configuration.isPressed ? 0.16 : 0)
-            )
-            .cornerRadius(8)
-            .shadow(color: .black.opacity(0.2), radius: 3, x: 0, y: 2)
+            .keyFace(base: theme.popupBackground, pressed: configuration.isPressed)
             .scaleEffect(configuration.isPressed ? 0.94 : 1.0)
             .animation(.easeOut(duration: 0.08), value: configuration.isPressed)
     }

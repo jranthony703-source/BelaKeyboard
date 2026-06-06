@@ -15,7 +15,7 @@ struct ToolbarView: View {
     let onBackspace: () -> Void
 
     var body: some View {
-        HStack(spacing: 6) {
+        HStack(spacing: 5) {
             globeButton
             languageButton
             modeSwitchButton
@@ -24,7 +24,7 @@ struct ToolbarView: View {
             backspaceButton
         }
         .padding(.horizontal, 4)
-        .padding(.vertical, 4)
+        .padding(.vertical, 5)
         .background(theme.keyboardBackground)
     }
 
@@ -33,42 +33,42 @@ struct ToolbarView: View {
         switch mode {
         case .geez:
             HStack(spacing: 4) {
-                KeyButton(label: Strings.Keyboard.numbers, theme: theme, isSpecial: true, hapticStrength: .medium, action: onNumbers)
-                    .frame(minWidth: 38)
-                KeyButton(label: Strings.Keyboard.latin, theme: theme, isSpecial: true, hapticStrength: .medium, action: onLatin)
-                    .frame(minWidth: 38)
-                KeyButton(label: Strings.Keyboard.emoji, theme: theme, isSpecial: true, hapticStrength: .medium, action: onEmoji)
-                    .frame(minWidth: 38)
+                KeyButton(label: Strings.Keyboard.numbers, theme: theme, isSpecial: true, hapticStrength: .medium, fontSize: 15, action: onNumbers)
+                    .frame(width: 36)
+                KeyButton(label: Strings.Keyboard.latin, theme: theme, isSpecial: true, hapticStrength: .medium, fontSize: 14, action: onLatin)
+                    .frame(width: 38)
+                KeyButton(label: Strings.Keyboard.emoji, theme: theme, isSpecial: true, hapticStrength: .medium, fontSize: 18, action: onEmoji)
+                    .frame(width: 36)
             }
         case .latin, .numbers, .emoji:
-            KeyButton(label: Strings.Keyboard.geez, theme: theme, isSpecial: true, hapticStrength: .medium, action: onGeez)
-                .frame(minWidth: 50)
+            KeyButton(label: Strings.Keyboard.geez, theme: theme, isSpecial: true, hapticStrength: .medium, fontSize: 16, action: onGeez)
+                .frame(minWidth: 52)
         }
     }
 
     private var globeButton: some View {
-        KeyButton(label: "🌐", theme: theme, isSpecial: true, hapticStrength: .medium, action: onGlobe)
-            .frame(width: 44)
+        KeyButton(label: "🌐", theme: theme, isSpecial: true, hapticStrength: .medium, fontSize: 18, action: onGlobe)
+            .frame(width: 40)
     }
 
     private var languageButton: some View {
-        KeyButton(label: language.shortLabel, theme: theme, isSpecial: true, hapticStrength: .medium, action: onLanguageToggle)
-            .frame(minWidth: 44)
+        KeyButton(label: language.shortLabel, theme: theme, isSpecial: true, hapticStrength: .medium, fontSize: 16, action: onLanguageToggle)
+            .frame(width: 40)
     }
 
     private var spaceButton: some View {
-        KeyButton(label: Strings.Keyboard.space, theme: theme, isSpecial: true, hapticStrength: .medium, action: onSpace)
+        KeyButton(label: Strings.Keyboard.space, theme: theme, isSpecial: true, hapticStrength: .medium, fontSize: 15, action: onSpace)
             .frame(maxWidth: .infinity)
     }
 
     private var returnButton: some View {
-        KeyButton(label: Strings.Keyboard.returnKey, theme: theme, isSpecial: true, hapticStrength: .medium, action: onReturn)
-            .frame(minWidth: 60)
+        KeyButton(label: Strings.Keyboard.returnKey, theme: theme, isSpecial: true, hapticStrength: .medium, fontSize: 15, action: onReturn)
+            .frame(width: 56)
     }
 
     private var backspaceButton: some View {
         BackspaceKeyButton(theme: theme, onDelete: onBackspace)
-            .frame(width: 44)
+            .frame(width: 40)
     }
 }
 
@@ -83,16 +83,11 @@ struct BackspaceKeyButton: View {
 
     var body: some View {
         Text("⌫")
-            .font(.system(size: 22))
+            .font(.system(size: 20))
             .foregroundColor(theme.keyText)
-            .frame(maxWidth: .infinity, minHeight: 44)
-            .background(
-                theme.specialKeyBackground
-                    .brightness(isPressed ? 0.14 : 0)
-            )
-            .cornerRadius(6)
-            .shadow(color: .black.opacity(0.18), radius: 1, x: 0, y: 1)
-            .scaleEffect(isPressed ? 0.94 : 1.0)
+            .frame(maxWidth: .infinity, minHeight: 43)
+            .keyFace(base: theme.specialKeyBackground, pressed: isPressed)
+            .scaleEffect(isPressed ? 0.93 : 1.0)
             .animation(.easeOut(duration: 0.08), value: isPressed)
             .contentShape(Rectangle())
             .gesture(

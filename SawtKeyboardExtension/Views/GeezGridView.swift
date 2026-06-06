@@ -22,7 +22,7 @@ struct GeezGridView: View {
                     }
                 }
             }
-            .padding(.horizontal, 4)
+            .padding(.horizontal, 5)
             .padding(.vertical, 6)
         }
         .contentShape(Rectangle())
@@ -30,18 +30,23 @@ struct GeezGridView: View {
     }
 }
 
+// MARK: - Key button
+
 struct KeyButton: View {
     let label: String
     let theme: Theme
     var isHighlighted: Bool = false
     var isSpecial: Bool = false
     var hapticStrength: HapticManager.Strength = .light
+    var fontSize: CGFloat = 22
     let action: () -> Void
 
     var body: some View {
         Button(action: action) {
             Text(label)
-                .font(.system(size: 22, weight: .regular))
+                .font(.system(size: fontSize, weight: .regular))
+                .lineLimit(1)
+                .minimumScaleFactor(0.5)
         }
         .buttonStyle(
             PressableKeyStyle(
@@ -61,23 +66,68 @@ struct PressableKeyStyle: ButtonStyle {
     var hapticStrength: HapticManager.Strength = .light
 
     func makeBody(configuration: Configuration) -> some View {
+        let base = isSpecial ? theme.specialKeyBackground : theme.keyBackground
         configuration.label
             .foregroundColor(theme.keyText)
-            .frame(maxWidth: .infinity, minHeight: 44)
-            .background(
-                (isSpecial ? theme.specialKeyBackground : theme.keyBackground)
-                    .brightness(configuration.isPressed ? 0.14 : 0)
-            )
+            .frame(maxWidth: .infinity, minHeight: 43)
+            .keyFace(base: base, pressed: configuration.isPressed)
             .overlay(
-                RoundedRectangle(cornerRadius: 6)
-                    .stroke(isHighlighted ? theme.keyText.opacity(0.55) : .clear, lineWidth: 2)
+                RoundedRectangle(cornerRadius: 8, style: .continuous)
+                    .stroke(isHighlighted ? theme.keyText.opacity(0.6) : .clear, lineWidth: 2)
             )
-            .cornerRadius(6)
-            .shadow(color: .black.opacity(0.18), radius: 1, x: 0, y: 1)
-            .scaleEffect(configuration.isPressed ? 0.94 : 1.0)
+            .scaleEffect(configuration.isPressed ? 0.93 : 1.0)
             .animation(.easeOut(duration: 0.08), value: configuration.isPressed)
             .onChange(of: configuration.isPressed) { pressed in
                 if pressed { HapticManager.tap(hapticStrength) }
             }
+    }
+}
+
+// MARK: - Glossy key face (shared by all keys)
+
+/// Gives any key a premium look: base color + top gloss highlight +
+/// bottom depth shadow + a crisp drop shadow. Works on every theme.
+struct KeyFace: ViewModifier {
+    let base: Color
+    var pressed: Bool = false
+    var cornerRadius: CGFloat = 8
+
+    func body(content: Content) -> some View {
+        content
+            .background(
+                ZStack {
+                    RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+                        .fill(base)
+                    RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+                        .fill(
+                            LinearGradient(
+                                colors: [.white.opacity(0.22), .white.opacity(0.0)],
+                                startPoint: .top,
+                                endPoint: .center
+                            )
+                        )
+                    RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+                        .fill(
+                            LinearGradient(
+                                colors: [.clear, .black.opacity(0.16)],
+                                startPoint: .center,
+                                endPoint: .bottom
+                            )
+                        )
+                }
+                .brightness(pressed ? 0.10 : 0)
+            )
+            .clipShape(RoundedRectangle(cornerRadius: cornerRadius, style: .continuous))
+            .overlay(
+                RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+                    .stroke(Color.white.opacity(0.10), lineWidth: 0.5)
+            )
+            .shadow(color: .black.opacity(0.30), radius: 1.2, x: 0, y: 1)
+    }
+}
+
+extension View {
+    func keyFace(base: Color, pressed: Bool = false, cornerRadius: CGFloat = 8) -> some View {
+        modifier(KeyFace(base: base, pressed: pressed, cornerRadius: cornerRadius))
     }
 }
