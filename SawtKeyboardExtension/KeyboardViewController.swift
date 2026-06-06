@@ -2,10 +2,14 @@ import UIKit
 import SwiftUI
 
 /// Hosts the SwiftUI keyboard and bridges to UIInputViewController.
-final class KeyboardViewController: UIInputViewController {
+final class KeyboardViewController: UIInputViewController, UIInputViewAudioFeedback {
     private var hostingController: UIHostingController<KeyboardRootView>?
     private var heightConstraint: NSLayoutConstraint?
     private let keyboardState = KeyboardState()
+
+    /// Enables the standard iOS keyboard "click" sound (respects the user's
+    /// Sounds → Keyboard Clicks setting). Does not require Full Access.
+    var enableInputClicksWhenVisible: Bool { true }
 
     private var preferredKeyboardHeight: CGFloat {
         let isLandscape = UIScreen.main.bounds.width > UIScreen.main.bounds.height
@@ -35,7 +39,13 @@ final class KeyboardViewController: UIInputViewController {
     private func setupKeyboardView() {
         let rootView = KeyboardRootView(
             state: keyboardState,
-            onInsertText: { [weak self] text in self?.textDocumentProxy.insertText(text) },
+            onInsertText: { [weak self] text in
+                if text == " " {
+                    self?.handleSpaceInsert()
+                } else {
+                    self?.textDocumentProxy.insertText(text)
+                }
+            },
             onDeleteBackward: { [weak self] in self?.textDocumentProxy.deleteBackward() },
             onAdvanceInputMode: { [weak self] in self?.advanceToNextInputMode() }
         )
@@ -65,6 +75,38 @@ final class KeyboardViewController: UIInputViewController {
 
     private func updateHeightConstraint() {
         heightConstraint?.constant = preferredKeyboardHeight
+    }
+
+    // MARK: - Smart space (double-space → period)
+
+    /// Pressing space when the text already ends in "<letter> " replaces the
+    /// trailing space with a sentence period + space — Ge'ez "።" after Ethiopic
+    /// script, "." otherwise. Mirrors the system keyboard's double-space shortcut.
+    private func handleSpaceInsert() {
+        let proxy = textDocumentProxy
+        if let before = proxy.documentContextBeforeInput, before.hasSuffix(" ") {
+            let beforeSpace = before.dropLast()
+            if let last = beforeSpace.last,
+               !last.isWhitespace,
+               !Self.isSentenceTerminator(last) {
+                proxy.deleteBackward()
+                proxy.insertText(Self.periodSymbol(after: last) + " ")
+                return
+            }
+        }
+        proxy.insertText(" ")
+    }
+
+    private static func isSentenceTerminator(_ character: Character) -> Bool {
+        ".!?።፣፤፥".contains(character)
+    }
+
+    private static func periodSymbol(after character: Character) -> String {
+        if let scalar = character.unicodeScalars.first,
+           (0x1200...0x137F).contains(scalar.value) {
+            return "።"   // Ethiopic full stop
+        }
+        return "."
     }
 }
 
@@ -96,5 +138,8 @@ enum HapticManager {
         case .medium: medium.impactOccurred(intensity: 0.75)
         case .rigid: rigid.impactOccurred(intensity: 0.85)
         }
+        // Standard iOS keyboard click — plays only if the user has keyboard
+        // clicks enabled. Does not require Full Access.
+        UIDevice.current.playInputClick()
     }
 }

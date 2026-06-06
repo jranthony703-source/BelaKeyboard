@@ -17,13 +17,13 @@ struct NumberPadView: View {
             VStack(spacing: 8) {
                 LazyVGrid(columns: columns, spacing: 6) {
                     ForEach(numberKeys, id: \.self) { key in
-                        KeyButton(label: key, theme: theme, isSpecial: false) { onInsert(key) }
+                        KeyButton(label: key, theme: theme, isSpecial: false, showsPop: true) { onInsert(key) }
                     }
                 }
 
                 LazyVGrid(columns: columns, spacing: 6) {
                     ForEach(punctuationKeys, id: \.self) { key in
-                        KeyButton(label: key, theme: theme, isSpecial: false) { onInsert(key) }
+                        KeyButton(label: key, theme: theme, isSpecial: false, showsPop: true) { onInsert(key) }
                     }
                 }
 

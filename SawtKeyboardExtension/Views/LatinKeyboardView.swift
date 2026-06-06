@@ -77,7 +77,7 @@ struct LatinKeyboardView: View {
             Text(display(key))
                 .font(.system(size: 22, weight: .regular))
         }
-        .buttonStyle(PressableKeyStyle(theme: theme))
+        .buttonStyle(PressableKeyStyle(theme: theme, popLabel: display(key)))
         .frame(width: width)
     }
 

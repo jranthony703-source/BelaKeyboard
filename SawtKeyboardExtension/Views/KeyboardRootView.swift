@@ -53,7 +53,16 @@ struct KeyboardRootView: View {
                 )
             }
             .frame(width: geometry.size.width, height: geometry.size.height)
-            .background(state.theme.keyboardBackground)
+            .background(
+                ZStack {
+                    state.theme.keyboardBackground
+                    LinearGradient(
+                        colors: [Color.white.opacity(0.05), Color.clear, Color.black.opacity(0.06)],
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                }
+            )
         }
         .background(state.theme.keyboardBackground)
     }
